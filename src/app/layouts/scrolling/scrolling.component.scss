@@ -1,0 +1,14 @@
+.header-nav.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 300;
+}
+
+.page-wrapper {
+  background-color: #fff;
+
+  .bg-odd {
+    background-color: whitesmoke;
+  }
+}

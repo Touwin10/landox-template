@@ -1,0 +1,63 @@
+:host /deep/ {
+  width: 100%;
+}
+
+
+.container {
+
+  .header {
+    margin: auto;
+
+    .h1 {
+      font-size: 34px;
+    }
+
+    p {
+      color: gray;
+    }
+
+    max-width: 320px;
+    font-weight: 100 !important;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .services {
+    padding: 20px;
+
+    .service {
+      max-width: 280px;
+      display: flex;
+      flex-wrap: nowrap;
+
+      .mdi {
+        font-size: 25px;
+        color: gray;
+      }
+
+      div {
+        margin-left: 20px;
+
+        span {
+          font-size: 18px;
+          padding: 0;
+          margin: 0;
+        }
+
+        p {
+          font-weight: 100;
+          color: gray;
+        }
+
+      }
+    }
+  }
+
+
+}
+
+@media(max-width: 959px) {
+  .container {
+    padding: 20px 5px !important;
+  }
+}

@@ -1,0 +1,59 @@
+.container {
+  padding: 30px;
+  min-height: 10vh;
+  background-color: rebeccapurple;
+
+
+  .content {
+
+    h3 {
+      color: #fff;
+      padding: 0;
+      font-weight: 500;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        font-size: 15px;
+        font-weight: 100;
+        color: whitesmoke;
+        padding: 5px;
+        cursor: pointer;
+
+        &:hover {
+          color: lightgray;
+        }
+      }
+    }
+
+    .mdi {
+      color: whitesmoke;
+      margin-right: 20px;
+    }
+  }
+
+
+}
+
+
+:host /deep/ mat-form-field.mat-form-field {
+  width: 100%;
+  color: white !important;
+
+  label {
+    color: white !important;
+  }
+
+  .mat-form-field-wrapper {
+    width: 100%;
+    color: white;
+    border-bottom-color: white;
+  }
+
+  .mat-form-field-underline {
+    background-color: white;
+  }
+}

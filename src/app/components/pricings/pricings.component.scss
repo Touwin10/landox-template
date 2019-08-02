@@ -1,0 +1,76 @@
+:host /deep/ {
+  width: 100%;
+}
+
+.container {
+
+  .header {
+    margin: auto;
+
+    .h1 {
+      font-size: 34px;
+    }
+
+    p {
+      color: gray;
+    }
+
+    max-width: 320px;
+    font-weight: 100 !important;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .pricing {
+    background-color: white;
+    max-width: 200px;
+    padding: 50px;
+    border: 2px solid whitesmoke;
+    text-align: center;
+    margin: 10px;
+
+    .head {
+      padding: 0 10px;
+      margin-bottom: 50px;
+      border-bottom: 1px solid lightgray;
+
+      .plan {
+        color: gray;
+        font-size: 20px;
+      }
+
+      .price {
+        font-size: 38px;
+      }
+    }
+
+    .body {
+      height: 12vh;
+      padding: 10px;
+      font-weight: 100;
+
+      span {
+        font-weight: bold;
+      }
+
+      div {
+        margin-bottom: 10px;
+      }
+    }
+
+    .footer {
+      margin-top: 50px;
+      padding: 10px;
+      border-top: 1px solid lightgray;
+
+    }
+
+  }
+
+}
+
+@media(max-width: 959px) {
+  .container {
+    padding: 20px 5px !important;
+  }
+}

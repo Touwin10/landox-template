@@ -1,0 +1,97 @@
+<div class="container" [style.padding]="padding + 'px'">
+
+  <div class="header">
+
+    <div class="h1">What They Said</div>
+
+    <p>
+      Consectetur adipisicing elit. Velit id error rem qui. Neque aperiam saepe placeat vero reprehenderit.
+    </p>
+  </div>
+
+  <ngu-carousel #myCarousel [inputs]="carouselConfig" [dataSource]="[first, second, third]">
+    <div *nguCarouselDef="let item;" class="item">
+      <div class="tile">
+        <ng-container *ngTemplateOutlet="item"></ng-container>
+      </div>
+    </div>
+
+    <ng-template #first>
+      <div class="side-content">
+        <div class="testimonial-header" fxLayout="row" fxLayoutAlign=" start">
+          <img class="testimonial-img" src="https://pngimage.net/wp-content/uploads/2018/06/guest-icon-png-2.png">
+          <div>
+            <div>Dave Marc</div>
+            <small>Manager</small>
+          </div>
+        </div>
+
+        <div class="testimonial-body">
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+            aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+            aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+          </p>
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template #second>
+      <div class="side-content">
+        <div class="testimonial-header" fxLayout="row" fxLayoutAlign=" start">
+          <img class="testimonial-img" src="https://pngimage.net/wp-content/uploads/2018/06/guest-icon-png-2.png">
+          <div>
+            <div>Peter Sam</div>
+            <small>Director</small>
+          </div>
+        </div>
+
+        <div class="testimonial-body">
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+            aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+            aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+          </p>
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template #third>
+      <div class="side-content">
+        <div class="testimonial-header" fxLayout="row" fxLayoutAlign=" start">
+          <img class="testimonial-img" src="https://pngimage.net/wp-content/uploads/2018/06/guest-icon-png-2.png">
+          <div>
+            <div>Miley Dive</div>
+            <small>Developer</small>
+          </div>
+        </div>
+
+        <div class="testimonial-body">
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+            aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+            aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+          </p>
+        </div>
+      </div>
+    </ng-template>
+
+    <button mat-button NguCarouselNext class="rightRs">
+      <span class="mdi mdi-chevron-right"></span>
+    </button>
+    <button mat-button NguCarouselPrev class="leftRs">
+      <span class="mdi mdi-chevron-left"></span>
+    </button>
+    <ul class="myPoint" NguCarouselPoint>
+      <li *ngFor="let j of myCarousel.pointNumbers; let j = index" [class.active]="j==myCarousel.activePoint"
+        (click)="myCarousel.moveTo(j)"></li>
+    </ul>
+  </ngu-carousel>
+
+</div>

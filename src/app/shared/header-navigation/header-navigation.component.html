@@ -1,0 +1,56 @@
+<div class="container">
+  <mat-toolbar color="primary">
+    <div fxFlex="grow">
+      <a>
+        <h1>Landox</h1>
+      </a>
+    </div>
+    <div fxHide.gt-xs>
+      <button mat-icon-button (click)="onToggleBarMenu()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+
+    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+      <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+        <li [ngx-scroll-to]="home">
+          <a>Home</a>
+        </li>
+        <li [ngx-scroll-to]="features">
+          <a>Feature</a>
+        </li>
+        <li [ngx-scroll-to]="works">
+          <a>Works</a>
+        </li>
+        <li [ngx-scroll-to]="services">
+          <a>Services</a>
+        </li>
+        <li [ngx-scroll-to]="testimonials">
+          <a>Testimonials</a>
+        </li>
+        <li [ngx-scroll-to]="pricings">
+          <a>Pricing</a>
+        </li>
+        <li [ngx-scroll-to]="contact">
+          <a>Contact</a>
+        </li>
+      </ul>
+    </div>
+  </mat-toolbar>
+
+</div>
+
+<div class="bar-menu-wrapper" *ngIf="!toggleBarMenu" (click)="onToggleBarMenu()" fxHide.gt-xs>
+
+  <div class="bar-menu" [ngClass]="[toggleBarMenu ? 'hide' : 'show']">
+    <mat-list>
+      <mat-list-item [ngx-scroll-to]="home"> Home </mat-list-item>
+      <mat-list-item [ngx-scroll-to]="features"> Feature </mat-list-item>
+      <mat-list-item [ngx-scroll-to]="works"> Works </mat-list-item>
+      <mat-list-item [ngx-scroll-to]="services"> Services </mat-list-item>
+      <mat-list-item [ngx-scroll-to]="testimonials"> Testimonials </mat-list-item>
+      <mat-list-item [ngx-scroll-to]="pricings"> Pricing </mat-list-item>
+      <mat-list-item [ngx-scroll-to]="contact"> Contact </mat-list-item>
+    </mat-list>
+  </div>
+</div>

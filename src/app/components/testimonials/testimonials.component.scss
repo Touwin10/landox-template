@@ -1,0 +1,152 @@
+:host /deep/ {
+  width: 100%;
+}
+
+
+.container {
+  margin: auto;
+  max-width: 650px;
+
+  .header {
+    margin: auto;
+
+    .h1 {
+      font-size: 34px;
+    }
+
+    p {
+      color: gray;
+    }
+
+    max-width: 320px;
+    font-weight: 100 !important;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .side-content {
+    .testimonial-img {
+      margin-left: 30px;
+      width: 40px;
+      height: 40px;
+      border: 1px solid lightgray;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+    small {
+      color: gray;
+    }
+
+    .testimonial-body {
+      padding: 20px;
+      font-size: 20px;
+      text-align: center;
+      color: gray;
+      font-weight: 100;
+      line-height: 35px;
+      font-style: italic;
+
+    }
+  }
+
+
+
+  .tile {
+    min-height: 400px;
+    background-color: #fff;
+    background-size: cover !important;
+    display: flex;
+    padding: 20px;
+  }
+
+  .leftRs {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    left: 0px;
+
+    .mdi {
+      color: gray;
+      font-size: 28px;
+    }
+  }
+
+  .rightRs {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    right: 0;
+
+    .mdi {
+      color: gray;
+      font-size: 28px;
+    }
+  }
+
+
+  .myPoint {
+    list-style-type: none;
+    text-align: center;
+    padding: 12px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: auto;
+    box-sizing: border-box;
+  }
+
+  .myPoint li {
+    display: inline-block;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 0 3px;
+    transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    transition: 0.4s;
+    background-color: #fff;
+  }
+
+  .myPoint li.active {
+    background: #ccc;
+    transform: scale(1.2);
+    padding: 6px;
+  }
+
+  .navMenu {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: flex;
+
+      a {
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+
+        &.active {
+          background: goldenrod;
+        }
+
+        background: #ccc;
+        border-radius: 6px;
+      }
+
+      margin: 3px;
+    }
+  }
+
+}
+
+@media(max-width: 959px) {
+  .container {
+    padding: 20px 5px !important;
+  }
+}

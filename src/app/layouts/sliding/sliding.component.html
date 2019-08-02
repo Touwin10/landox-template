@@ -1,0 +1,94 @@
+<div class="container">
+
+  <ngu-carousel #myCarousel [inputs]="carouselConfig"
+    [dataSource]="[home, feature, works, services, testimonials, pricings, contact]">
+    <div *nguCarouselDef="let item;" class="item">
+      <div class="tile">
+        <ng-container *ngTemplateOutlet="item"></ng-container>
+      </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Home Section -->
+    <!-- ============================================================== -->
+    <ng-template #home>
+      <div style="background-color: rebeccapurple;width:100%;">
+        <home></home>
+      </div>
+    </ng-template>
+    <!-- ============================================================== -->
+    <!-- End Home Section -->
+    <!-- ============================================================== -->
+
+    <!-- ============================================================== -->
+    <!-- Feature Section -->
+    <!-- ============================================================== -->
+    <ng-template #feature>
+      <feature></feature>
+    </ng-template>
+    <!-- ============================================================== -->
+    <!-- End Feature Section -->
+    <!-- ============================================================== -->
+
+    <!-- ============================================================== -->
+    <!-- Works Section -->
+    <!-- ============================================================== -->
+    <ng-template #works>
+      <works></works>
+    </ng-template>
+    <!-- ============================================================== -->
+    <!-- End Works Section -->
+    <!-- ============================================================== -->
+
+    <!-- ============================================================== -->
+    <!-- Services Section -->
+    <!-- ============================================================== -->
+    <ng-template #services>
+      <services></services>
+    </ng-template>
+    <!-- ============================================================== -->
+    <!-- End Services Section -->
+    <!-- ============================================================== -->
+
+    <!-- ============================================================== -->
+    <!-- Testimonials Section -->
+    <!-- ============================================================== -->
+    <ng-template #testimonials>
+      <testimonials></testimonials>
+    </ng-template>
+    <!-- ============================================================== -->
+    <!-- End Testimonials Section -->
+    <!-- ============================================================== -->
+
+    <!-- ============================================================== -->
+    <!-- Pricings Section -->
+    <!-- ============================================================== -->
+    <ng-template #pricings>
+      <pricings></pricings>
+    </ng-template>
+    <!-- ============================================================== -->
+    <!-- End Pricing Section -->
+    <!-- ============================================================== -->
+
+    <!-- ============================================================== -->
+    <!-- Contact Section -->
+    <!-- ============================================================== -->
+    <ng-template #contact>
+      <contact [padding]="100"></contact>
+    </ng-template>
+    <!-- ============================================================== -->
+    <!-- Contact Section -->
+    <!-- ============================================================== -->
+
+    <button mat-button NguCarouselNext class="rightRs">
+      <span class="mdi mdi-chevron-right"></span>
+    </button>
+    <button mat-button NguCarouselPrev class="leftRs">
+      <span class="mdi mdi-chevron-left"></span>
+    </button>
+    <ul class="myPoint" NguCarouselPoint>
+      <li *ngFor="let j of myCarousel.pointNumbers; let j = index" [class.active]="j==myCarousel.activePoint"
+        (click)="myCarousel.moveTo(j)"></li>
+    </ul>
+  </ngu-carousel>
+
+</div>

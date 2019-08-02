@@ -1,0 +1,102 @@
+<mat-drawer-container class="drawer">
+
+  <mat-drawer #drawer class="side-menu" [mode]="(mobileQuery) ? 'side' : 'over'" [opened]="mobileQuery">
+    <!-- Side Bar Menu -->
+    <div class="menu">
+      <div class="brand">
+        Landox
+        <mat-icon style="color: white; float: right;" (click)="drawer.toggle()" fxHide.gt-xs>close</mat-icon>
+      </div>
+      <mat-list (click)="drawer.toggle()">
+        <mat-list-item [ngx-scroll-to]="home"> Home </mat-list-item>
+        <mat-list-item [ngx-scroll-to]="features"> Feature </mat-list-item>
+        <mat-list-item [ngx-scroll-to]="works"> Works </mat-list-item>
+        <mat-list-item [ngx-scroll-to]="services"> Services </mat-list-item>
+        <mat-list-item [ngx-scroll-to]="testimonials"> Testimonials </mat-list-item>
+        <mat-list-item [ngx-scroll-to]="pricings"> Pricing </mat-list-item>
+        <mat-list-item [ngx-scroll-to]="contact"> Contact </mat-list-item>
+      </mat-list>
+
+    </div>
+  </mat-drawer>
+
+  <!-- Main content -->
+  <mat-drawer-content>
+
+    <div fxLayout="row" fxLayoutAlign="center center" fxHide.gt-xs class="nav-bar">
+      <div>
+        <button mat-icon-button (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+      <div fxFlex="grow">
+        <a>
+          <h1>Landox</h1>
+        </a>
+      </div>
+
+    </div>
+
+
+    <!-- ============================================================== -->
+    <!-- Page wrapper  -->
+    <!-- ============================================================== -->
+    <div class="page-wrapper">
+      <!-- ============================================================== -->
+      <!-- Home Section -->
+      <!-- ============================================================== -->
+      <div class="home" #home>
+        <home [padding]="10"></home>
+      </div>
+      <!-- ============================================================== -->
+      <!-- Feature Section -->
+      <!-- ============================================================== -->
+      <div class="features" #features>
+        <feature [padding]="10"></feature>
+      </div>
+      <!-- ============================================================== -->
+      <!-- Works Section -->
+      <!-- ============================================================== -->
+      <div class="works bg-odd" #works>
+        <works [padding]="10"></works>
+      </div>
+      <!-- ============================================================== -->
+      <!-- Services Section -->
+      <!-- ============================================================== -->
+      <div class="services" #services>
+        <services [padding]="10"></services>
+      </div>
+      <!-- ============================================================== -->
+      <!-- Testimonials Section -->
+      <!-- ============================================================== -->
+      <div class="testimonials bg-odd" #testimonials>
+        <testimonials [padding]="10"></testimonials>
+      </div>
+      <!-- ============================================================== -->
+      <!-- Pricing Section -->
+      <!-- ============================================================== -->
+      <div class="pricings" #pricings>
+        <pricings [padding]="10"></pricings>
+      </div>
+      <!-- ============================================================== -->
+      <!-- Contact Section -->
+      <!-- ============================================================== -->
+      <div class="contact bg-odd" #contact>
+        <contact [padding]="10"></contact>
+      </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Page wrapper  -->
+    <!-- ============================================================== -->
+
+    <!-- ============================================================== -->
+    <!-- footer -->
+    <!-- ============================================================== -->
+    <footer class="footer">
+      <footer-bar></footer-bar>
+    </footer>
+    <!-- ============================================================== -->
+    <!-- End footer -->
+    <!-- ============================================================== -->
+  </mat-drawer-content>
+</mat-drawer-container>

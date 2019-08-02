@@ -1,0 +1,46 @@
+<div class="container" [style.padding]="padding + 'px'">
+
+
+  <div class="header">
+    <div class="h1">Get In Touch</div>
+    <p>
+      Consectetur adipisicing elit. Velit id error rem qui. Neque aperiam saepe placeat vero reprehenderit.
+    </p>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="center center">
+
+    <div>
+      <!-- Including Map Locations -->
+      <!-- <ngui-map center="Brampton, Canada"></ngui-map> -->
+    </div>
+
+    <div class="forms">
+
+      <div class="primary-field" fxLayout="row wrap" fxLayoutAlign="center center">
+        <mat-form-field>
+          <input matInput placeholder="Name">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Email">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Phone">
+        </mat-form-field>
+      </div>
+
+      <mat-form-field>
+        <textarea matInput placeholder="Message" rows="5" cols="10"></textarea>
+      </mat-form-field>
+
+      <div fxLayoutAlign="center">
+        <button mat-stroked-button>SEND MESSAGE</button>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>

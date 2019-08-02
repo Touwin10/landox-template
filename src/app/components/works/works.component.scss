@@ -1,0 +1,50 @@
+:host /deep/ {
+  width: 100%;
+}
+
+.container {
+
+  .header {
+    margin: auto;
+
+    .h1 {
+      font-size: 34px;
+    }
+
+    p {
+      color: gray;
+    }
+
+    max-width: 320px;
+    font-weight: 100 !important;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .cards {
+    .card {
+      max-width: 350px;
+      margin: 5px;
+      box-shadow: none;
+      border: 1px solid lightgray;
+
+      img {
+        -webkit-filter: grayscale(100%);
+        /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+        height: 28vh;
+        background-attachment: fixed;
+      }
+
+      button {
+        color: lightgray;
+      }
+    }
+  }
+}
+
+@media(max-width: 959px) {
+  .container {
+    padding: 20px 5px !important;
+  }
+}

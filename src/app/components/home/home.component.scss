@@ -1,0 +1,73 @@
+:host /deep/ {
+  width: 100%;
+}
+
+.container {
+  margin: auto;
+  min-height: 70vh;
+  background-color: rebeccapurple;
+
+  .info-head {
+    margin-top: 100px;
+    max-width: 450px;
+
+    .title {
+      color: #fff;
+      font-size: 4vw;
+      font-weight: 100;
+    }
+
+    p {
+      small {
+        font-size: 2vw;
+      }
+
+      padding: 0;
+      margin: 0;
+    }
+
+    .description {
+      margin-top: 50px;
+      color: #fff;
+      font-weight: 100;
+      font-size: 20px;
+      ;
+    }
+  }
+
+  .img-head {
+    .responsive {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+
+}
+
+
+@media(max-width: 959px) {
+  .container {
+    padding: 20px 15px !important;
+
+    .info-head {
+      .title {
+        font-size: 15vw;
+      }
+
+      p {
+        small {
+          font-size: 8vw;
+        }
+      }
+
+      .description {
+        margin-top: 20px;
+        color: #fff;
+        font-weight: 100;
+        font-size: 15px;
+        ;
+      }
+    }
+  }
+}
